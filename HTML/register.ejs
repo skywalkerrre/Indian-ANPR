@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <div class="main">
+        <form action="/reg" method="post">
+            <div class="token"><%= token10 %></div>
+            <input type="hidden" name="person" value=<%= token %>>
+            <h3>First name : </h3>
+            <input type="text" name="fname" value=<%= token1 %>>
+            <br>
+            <h3>Last name : </h3>
+            <input type="text" name="lname" value=<%= token2 %>>
+            <br>
+            <h3>Phone No. : </h3>
+            <input type="text" name="phno" value=<%= token3 %>>
+            <br>
+            <h3>Email : </h3>
+            <input type="text" name="email" value=<%= token4 %>>
+            <br>
+            <% if(token == "user"){ %>
+            <h3>User Name : </h3>
+            <input type="text" name="username" value=<%= token5 %>>
+            <br>
+            <% } %>
+            <% if(token == "admin"){ %>
+            <h3>Address : </h3>
+            <input type="text" name="address" value=<%= token8 %>>
+            <br>
+            <h3>Designation : </h3>
+            <input type="text" name="designation" value=<%= token9 %>>
+            <br>
+            <% } %>
+            <h3>Password : </h3>
+            <input type="password" name="password" value=<%= token6 %>>
+            <br>
+            <h3>Reenter Password : </h3>
+            <input type="password" name="password1" value=<%= token6 %>>
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+            <br>
+        </form>
+        
+        <br><br>
+    </div>
+    
+
+    <style>
+        body{
+            background-image: url("/background-images/img5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+        }
+
+        h1{
+            color: azure;
+            margin-left: 170%;
+            margin-top: 10%;
+            margin-bottom: 10%;
+            width: 400px;
+            height: auto;
+        }
+
+        h3{
+            color: black;
+        }
+
+        .token{
+            color: black;
+            font-size: 18px;
+        }
+
+        .main{
+            text-align: center;
+            position: relative;
+            width: 300px;
+            height: auto;
+            margin-top: 10%;
+            margin-left: 139%;
+            padding: 30px;
+            border-radius: 20px;
+            isolation: isolate;  
+        }
+
+        .main::after{
+            content:'' ;
+            position: absolute;
+            z-index: -1;
+            inset:0;
+            background:rgb(134, 156, 156);
+            opacity: 0.7;
+            border-radius: 40px; 
+        }
+
+        input{
+            height: 25px;
+            width: 200px;
+            font-size: 18px;
+            border-radius: 5px;
+            border-color: rgb(0, 0, 0);
+            background-color:rgb(247, 247, 247);
+        }
+
+        button{
+            font-size: 17px;
+            height: 30px;
+            width: 90px;
+            color:whitesmoke;
+            background-color: rgb(9, 9, 9);
+            border-radius: 10px;
+            border-color: black;
+            cursor: pointer;
+        }
+    </style>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+body{
+    background-image: url("/background-images/img5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+h1{
+    color: azure;
+    margin-left: 140%;
+    width: 400px;
+    height: auto;
+}
+
+h3{
+    color: black;
+}
+
+.main{
+    text-align: center;
+    position: relative;
+    width: 300px;
+    height: auto;
+    margin-top: 10%;
+    margin-left: 139%;
+    padding: 30px;
+    border-radius: 20px;
+    isolation: isolate;  
+}
+
+.main::after{
+    content:'' ;
+    position: absolute;
+    z-index: -1;
+    inset:0;
+    background:rgb(134, 156, 156);
+    opacity: 0.7;
+    border-radius: 40px; 
+}
+
+input{
+    border-radius: 5px;
+    border-color: rgb(0, 0, 0);
+    background-color:rgb(247, 247, 247);
+}
+
+button{
+    padding: 10px;
+    border-radius: 10px;
+    border-color:black;
+    color: aliceblue;
+    background-color:rgb(26, 23, 23);
+    margin-top: 20%;
+    margin-left: 30px;
+}
+
+#btn1{
+    margin-left: 30%;
+}
+

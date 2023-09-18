@@ -1,0 +1,94 @@
+create table VEHICLE (
+    vehicle_no varchar(10) NOT NULL,
+    model varchar(20) NOT NULL,
+    year_of_mfg int NOT NULL,
+    chassis_no char(9) NOT NULL,
+    fuel_type varchar(10) NOT NULL,
+    colour varchar(10) NOT NULL,
+    customer_id char(9) NOT NULL,
+    vehicle_type varchar(15),
+    UNIQUE(vehicle_no,chassis_no),
+    PRIMARY KEY(vehicle_no),
+    FOREIGN KEY(customer_id) REFERENCES CUSTOMER(customer_id));
+
+create table CUSTOMER (
+    customer_id char(9) NOT NULL,
+    fname varchar(15) NOT NULL,
+    mname varchar(15),
+    lname varchar(15) NOT NULL,
+    dob date,
+    email varchar(20),
+    phno char(10) NOT NULL,
+    address varchar(50) NOT NULL,
+    pincode char(6) NOT NULL,
+    UNIQUE(customer_id),
+    PRIMARY KEY(customer_id));
+
+
+create table LOGIN (
+    username varchar(15) NOT NULL,
+    password varchar(10) NOT NULL,
+    PRIMARY KEY(username));
+
+
+create table RTO_ADMIN (
+    admin_id char(9) NOT NULL,
+    fname varchar(15) NOT NULL,
+    lname varchar(15) NOT NULL,
+    address varchar(50),
+    designation varchar(15) NOT NULL,
+    phno char(10) NOT NULL,
+    email varchar(20) NOT NULL,
+    password varchar(10) NOT NULL,
+    PRIMARY KEY(admin_id));
+
+
+create table USER (
+    user_id char(9) NOT NULL,
+    fname varchar(15) NOT NULL,
+    lname varchar(15) NOT NULL,
+    username varchar(15) NOT NULL,
+    phno char(10) NOT NULL,
+    email varchar(20) NOT NULL,
+    UNIQUE(username),
+    PRIMARY KEY(user_id),
+    FOREIGN KEY(username) REFERENCES LOGIN(username));
+
+create table DOCUMENT (
+    reg_id char(9) NOT NULL,
+    regd_date date NOT NULL,
+    regd_type varchar(10) NOT NULL,
+    ins_id char(9) NOT NULL,
+    ins_start_date date NOT NULL,
+    ins_end_date date NOT NULL,
+    puc_id char(9) NOT NULL,
+    puc_start_date date NOT NULL,
+    puc_end_date date NOT NULL,
+    notified char(1),
+    notified_date date,
+    vehicle_no varchar(10) NOT NULL,
+    UNIQUE(reg_id,ins_id,puc_id,vehicle_no),
+    PRIMARY KEY(reg_id),
+    FOREIGN KEY(vehicle_no) REFERENCES VEHICLE(vehicle_no));
+
+create table DRIVING_LICENSE (
+    dl_no char(9) NOT NULL,
+    customer_id char(9) NOT NULL,
+    dl_due_date date NOT NULL,
+    UNIQUE(dl_no,customer_id),
+    PRIMARY KEY(dl_no),
+    FOREIGN KEY(customer_id) REFERENCES CUSTOMER(customer_id));
+
+create table DL_TYPE (
+    dl_no char(9) NOT NULL,
+    dl_type varchar(15) NOT NULL,
+    PRIMARY KEY(dl_no,dl_type));
+
+create table MISSING_VEHICLE (
+    vehicle_no varchar(10) NOT NULL,
+    customer_id char(9) NOT NULL,
+    missing_date date NOT NULL,
+    place varchar(20) NOT NULL,
+    UNIQUE(vehicle_no,customer_id),
+    PRIMARY KEY(vehicle_no),
+    FOREIGN KEY(customer_id) REFERENCES CUSTOMER(customer_id));

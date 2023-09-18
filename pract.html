@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropdown-toggle">Dropdown</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Option 1</a>
+          <a class="dropdown-item" href="#">Option 2</a>
+          <a class="dropdown-item" href="#">Option 3</a>
+        </div>
+    </div>
+      
+    <div class="dropdown">
+        <button class="dropdown-toggle">Dropdown 2</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Option 4</a>
+          <a class="dropdown-item" href="#">Option 5</a>
+          <a class="dropdown-item" href="#">Option 6</a>
+        </div>
+    </div>
+    <style>
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+
+        .dropdown-toggle {
+        background-color: blue;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        display: none;
+        background-color: lightblue;
+        }
+
+        .dropdown-item {
+        display: block;
+        padding: 10px 20px;
+        color: white;
+        }
+
+        .dropdown-item:hover {
+        background-color: blue;
+        cursor: pointer;
+        }
+
+    </style>
+
+    <script>
+                const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+        for (let i = 0; i < dropdownToggles.length; i++) {
+        dropdownToggles[i].addEventListener('click', function() {
+            this.nextElementSibling.style.display =
+            this.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+        });
+        }
+
+    </script>
+</body>
+</html>

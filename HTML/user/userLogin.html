@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <!-- <link rel="stylesheet" href="/CSS/index.css"> -->
+</head>
+<body>
+    <div class="main">
+        <form class="login" action="/userLogin" method="post">
+            <h1>User Login</h1>
+            <input type="text" name="username" placeholder="username">
+            <br>
+            <input type="password" name="password" placeholder="password">
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+            <br>
+        </form>
+        <form action="/register" method="post">
+            <input type="hidden" name="person" value="user">
+            <h3>Don't have an account?</h3>
+            <button>Register</button>
+        </form>
+        <br>
+        <div class="token">
+            <%= token %>
+        </div>
+        
+    </div>
+
+    <style>
+        body{
+            background-image: url("/background-images/img2.jpg");
+            background-size:cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            /* opacity: 0.5; */
+        }
+
+        .main{
+            text-align: center;
+            position: relative;
+            width: 300px;
+            height: auto;
+            margin-top: 100%;
+            margin-left: 280%;
+            /* background-color:rgb(40, 50, 59); */
+            padding: 30px;
+            transform: translate(-50%,-50%);
+            border-radius: 20px;
+            isolation: isolate;
+            
+        }
+
+        .main::after{
+            content:'' ;
+            position: absolute;
+            z-index: -1;
+            inset:0;
+            background: rgb(40, 50, 59);
+            opacity: 0.6;
+
+        }
+
+        .token{
+            color: azure;
+        }
+
+        h1{
+            color:azure;
+        }
+
+        input{
+            background-color: transparent;
+            border-radius: 10px;
+            border-color: aliceblue;
+            padding: 10px;
+            margin-bottom: 5px;
+            color: aliceblue;
+            size: 20px;
+        }
+
+        ::placeholder{
+            color: aliceblue;
+        }
+
+        button{
+            padding: 5px;
+            border-radius: 10px;
+            border-color:azure;
+            color: aliceblue;
+            background-color: rgba(75, 95, 86, 0.305);
+        }
+
+        h3{
+            color: azure;
+        } 
+
+
+    </style>
+    
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle And Document Details</title>
+</head>
+<body>
+    <h1>Vehicle And Document Details</h1>
+    <div class="main">
+        <form action="/vehicleAndDocumentDetails" method="post">
+            <h3>Customer ID :</h3>
+            <input type="text" name="customer_id" value=<%= token %>>
+            <br>
+            <h3>Vehicle No.:</h3>
+            <input type="text" name="vehicle_no">
+            <br>
+            <h3>Model :</h3>
+            <input type="text" name="model">
+            <br>
+            <h3>Year of Mfg :</h3>
+            <input type="text" name="year_of_mfg">
+            <br>
+            <h3>Chassis No :</h3>
+            <input type="text" name="chassis_no">
+            <br>
+            <h3>Fuel Type :</h3>
+            <input type="text" name="fuel_type">
+            <br>
+            <h3>Colour :</h3>
+            <input type="text" name="colour">
+            <br>
+            <h3>Vehicle Type :</h3>
+            <input type="text" name="vehicle_type">
+            <br>
+            <h3>Registered Date :</h3>
+            <input type="text" name="regd_date">
+            <br>
+            <h3>Registration Type :</h3>
+            <input type="text" name="regd_type">
+            <br>
+            <div class="ins">
+                <h3>Insurance ID :</h3>
+                <input type="text" name="ins_id">
+                <br>
+                <h3>Insurance Start Date :</h3>
+                <input type="text" name="ins_start_date">
+                <br>
+                <h3>Insurance End Date :</h3>
+                <input type="text" name="ins_end_date">
+                <br>
+            </div>
+
+            <div class="puc">
+                <h3>PUC ID :</h3>
+                <input type="text" name="puc_id">
+                <br>
+                <h3>PUC Start Date :</h3>
+                <input type="text" name="puc_start_date">
+                <br>
+                <h3>PUC End Date :</h3>
+                <input type="text" name="puc_end_date">
+                <br>
+            </div>
+            
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+
+    <style>
+        body{
+            background-image: url("/background-images/img5.jpg");
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+            position: absolute;
+        }
+
+        h1{
+            margin-top: 15%;
+            margin-bottom: 20%;
+            color: azure;
+            margin-left: 90%;
+            width: 500px;
+            height: auto;
+        }
+
+        h3{
+            color: black;
+        }
+
+        .main{
+            text-align: center;
+            position: relative;
+            width: 300px;
+            height: auto;
+            margin-top: 10%;
+            margin-left: 100%;
+            padding: 30px;
+            border-radius: 20px;
+            isolation: isolate;  
+        }
+
+        .main::after{
+            content:'' ;
+            position: absolute;
+            z-index: -1;
+            inset:0;
+            background:rgb(134, 156, 156);
+            opacity: 0.7;
+            border-radius: 40px; 
+        }
+
+        input{
+            height: 25px;
+            width: 200px;
+            font-size: 18px;
+            border-radius: 5px;
+            border-color: rgb(0, 0, 0);
+            background-color:rgb(247, 247, 247);
+        }
+
+        .ins{
+            position: inline-block;
+        }
+
+        button{
+            font-size: 17px;
+            height: 30px;
+            width: 90px;
+            color:whitesmoke;
+            background-color: rgb(9, 9, 9);
+            border-radius: 10px;
+            border-color: black;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>

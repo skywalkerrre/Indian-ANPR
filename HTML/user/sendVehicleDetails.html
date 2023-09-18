@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Details</title>
+</head>
+<body>
+    <h1>Vehicle Details</h1>
+    <div class="main">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vehicle No. &nbsp;&nbsp;:  <%= token1 %></h3>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Model  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <%= token2 %></h3>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Year of Mfg.       :   <%= token3 %></h3>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chassis No.&nbsp;&nbsp;:  <%= token4 %></h3>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fuel Type   &nbsp;&nbsp;&nbsp; :  <%= token5 %></h3>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Colour     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  <%= token6 %></h3>
+        <br>
+        <a href="afterUserLogin"><button>Go Back</button></a>
+    </div>
+    
+
+    <style>
+        body{
+            background-image: url("/background-images/img5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+        }
+
+        h1{
+            color: azure;
+            margin-top: 20%;
+            margin-left: 160%;
+            width: 400px;
+            height: auto;
+        }
+
+        h3{
+            color: black;
+            font-size: 20px;
+            text-align: left;
+        }
+
+        .main{
+            text-align: center;
+            position: relative;
+            width: 300px;
+            height: auto;
+            margin-top: 10%;
+            margin-left: 139%;
+            padding: 30px;
+            border-radius: 20px;
+            isolation: isolate;  
+            align-items:baseline;
+        }
+
+        .main::after{
+            content:'' ;
+            position: absolute;
+            z-index: -1;
+            inset:0;
+            background:rgb(134, 156, 156);
+            opacity: 0.7;
+            border-radius: 40px; 
+            border-color: black;
+        }
+
+        input{
+            height: 25px;
+            width: 200px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border-color: rgb(0, 0, 0);
+            background-color:rgb(247, 247, 247);
+            
+        }
+
+        button{
+            font-size: 17px;
+            height: 30px;
+            width: 90px;
+            color:whitesmoke;
+            background-color: navy;
+            border-radius: 10px;
+            border-color: black;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/CSS/index.css"> -->
+    <title>Admin Home Page</title>
+</head>
+<body>
+    
+    <div class="main">
+        <h1>Admin Home Page</h1>
+        <div class="dropdown">
+            <button id="btn1" class="dropdown-toggle"> Create New Vehicle Record </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="createCustomerID/v" >Create New Customer ID</a>
+                <a class="dropdown-item" href="getCustomerID/v">Get Customer ID</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button id="btn2" class="dropdown-toggle"> Update Document </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="updateDocument/dType/ins" >Insurance</a>
+                <a class="dropdown-item" href="updateDocument/dType/puc">PUC</a>
+            </div>
+        </div>
+    
+        
+        
+        <div class="dropdown">
+            <button id="btn3" class="dropdown-toggle"> Add DL Details </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="createCustomerID/dl">Create New Customer ID</a>
+                <a class="dropdown-item" href="getCustomerID/dl">Get Customer ID</a>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        body{
+            background-image: url("/background-images/img5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1{
+            color: azure;
+            margin-top: 10%;
+            margin-left: 20%;
+            width: 400px;
+            height: auto;
+        }
+
+        .main{
+            margin-left: 26%;
+            margin-top: 10px;
+        }
+
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+
+        .dropdown-toggle {
+        padding: 10px;
+        border-radius: 10px;
+        border-color:black;
+        color: aliceblue;
+        background-color:rgb(6, 6, 79);
+        margin-top: 20%;
+        margin-left: 0px;
+        margin-right: 100px;
+        cursor: pointer;
+        }
+
+
+        .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        display: none;
+        background-color: black;
+        border-radius: 10px;
+        }
+
+        .dropdown-item {
+        display: block;
+        padding: 10px 20px;
+        color:aliceblue;
+        text-decoration: none;
+        }
+
+        .dropdown-item:hover {
+        background-color: gray;
+        cursor: pointer;
+        }
+
+    </style>
+
+    <script>
+                const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+        for (let i = 0; i < dropdownToggles.length; i++) {
+        dropdownToggles[i].addEventListener('click', function() {
+            this.nextElementSibling.style.display =
+            this.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+        });
+        }
+
+    </script>
+</body>
+</html>

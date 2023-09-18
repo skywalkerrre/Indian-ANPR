@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update DL</title>
+</head>
+<body>
+    <h1>DL Details</h1>
+    <div class="main">
+        <form action="/updateDL" method="post">
+            <h3>DL No.:</h3>
+            <input type="text" name="dl_no">
+            <br>
+            <h3>DL Type:</h3>
+            <input type="text" name="dl_type">
+            <br>
+            <h3>Due Date:</h3>
+            <input type="text" name="dl_due_date">
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+
+    <style>
+        body{
+            background-image: url("/background-images/img5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+        }
+
+        h1{
+            color: azure;
+            margin-top: 10%;
+            margin-left: 164%;
+            width: 400px;
+            height: auto;
+        }
+
+        h3{
+            color: black;
+            font-size: 20px;
+        }
+
+        .main{
+            text-align: center;
+            position: relative;
+            width: 300px;
+            height: auto;
+            margin-top: 20%;
+            margin-left: 139%;
+            padding: 30px;
+            border-radius: 20px;
+            isolation: isolate;  
+        }
+
+        .main::after{
+            content:'' ;
+            position: absolute;
+            z-index: -1;
+            inset:0;
+            background:rgb(134, 156, 156);
+            opacity: 0.7;
+            border-radius: 40px; 
+            border-color: black;
+        }
+
+        input{
+            height: 25px;
+            width: 200px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border-color: rgb(0, 0, 0);
+            background-color:rgb(247, 247, 247);
+        }
+
+        button{
+            font-size: 17px;
+            height: 30px;
+            width: 90px;
+            color:whitesmoke;
+            background-color: rgb(4, 4, 85);
+            border-radius: 10px;
+            border-color: black;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>

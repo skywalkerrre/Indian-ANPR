@@ -1,0 +1,15 @@
+const { createPool } = require("mysql2");
+
+const pool=createPool({
+    host:"localhost",
+    user:"root",
+    password:"somu",
+    database:"someshwar"
+});
+
+pool.query(`select * from details where age>18`,(err,result)=>{
+    if(err)
+        console.log(err);
+    else
+        console.log(result);
+});
