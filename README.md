@@ -1,4 +1,4 @@
-#Indian-ANPR 🚗🔍
+Indian-ANPR 🚗🔍
 Overview
 
 Indian-ANPR (Automatic Number Plate Recognition) is a computer vision–based vehicle details checking system designed to provide an efficient and automated way to identify and track vehicles. The system captures license plates using cameras, extracts the plate numbers using an image-processing algorithm, and cross-references them with a vehicle registration database.
