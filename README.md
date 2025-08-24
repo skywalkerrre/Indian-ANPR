@@ -1,34 +1,53 @@
-Indian-ANPR 🚗🔍
-Overview
+# 🇮🇳 Indian-ANPR (Automatic Number Plate Recognition)  
 
-Indian-ANPR (Automatic Number Plate Recognition) is a computer vision–based vehicle details checking system designed to provide an efficient and automated way to identify and track vehicles. The system captures license plates using cameras, extracts the plate numbers using an image-processing algorithm, and cross-references them with a vehicle registration database.
+Maintained by **Somil Singh** — *Software Engineer & AI Enthusiast*  
 
-This project demonstrates the integration of computer vision, databases, and intelligent communication systems, which can be extended to applications in traffic management, tolling systems, and urban safety monitoring.
+[![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)](https://www.python.org/)  
+[![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv)](https://opencv.org/)  
+[![MySQL](https://img.shields.io/badge/Database-MySQL-orange?logo=mysql)](https://www.mysql.com/)  
+[![Twilio](https://img.shields.io/badge/Notifications-Twilio-red?logo=twilio)](https://www.twilio.com/)  
+[![AI](https://img.shields.io/badge/AI-Computer%20Vision-purple?logo=ai)]()  
+[![Research](https://img.shields.io/badge/Focus-Research--Driven-yellow)]()  
 
-Key Features
+---
 
-📸 Automatic Plate Recognition: Uses image-processing techniques to detect and extract vehicle number plates.
+## 📂 Project Overview  
 
-🔎 Database Cross-Verification: Matches extracted details with a database of registered vehicles (make, model, owner, and registration status).
+- 🚘 Developed a **vehicle details verification system** powered by **Computer Vision + Database Integration**.  
+- 📸 Implemented a pipeline for **license plate detection & number extraction** from vehicle images.  
+- 🔎 Connected extracted data with a **registration database** to validate:  
+  - ✅ Owner details  
+  - ✅ Vehicle model  
+  - ✅ Registration/document validity  
+- ⚠️ Built automated **alerts for expired or invalid registrations**.  
+- 📲 Integrated **Twilio SMS notifications** to track which users are registered and which are not — enabling real-time compliance monitoring.  
 
-⚠️ Document Validity Alerts: Automatically flags invalid or expired vehicle documentation.
+---
 
-📲 Twilio Integration: Connected with the Twilio API to send SMS notifications to users. This feature enables checking which users have their vehicles properly registered and which do not, providing real-time communication for compliance.
+## ⚙️ Tech Stack  
 
-🛡 Traffic & Security Applications: Supports automated verification for security checkpoints and smart traffic systems.
+- **Python** → Core logic, ANPR pipeline  
+- **OpenCV** → License plate detection & recognition  
+- **MySQL** → Vehicle & user registration database  
+- **Flask (optional for API)** → Backend integration  
+- **HTML / CSS / JavaScript** → User interface  
+- **Twilio** → SMS-based notification system  
 
-Technical Details
+---
 
-Languages & Tools: Python, JavaScript, HTML, CSS, MySQL, Twilio API.
+## 🎯 Purpose  
 
-Core Components:
+- **Practical Application** → Apply **Computer Vision + Database Systems** to solve a real-world problem (vehicle compliance).  
+- **Industry Relevance** → Demonstrates ability to integrate **AI-driven detection, database validation, and real-time communication systems**.  
+- **Societal Impact** → Supports **traffic enforcement, safety, and monitoring of registered vehicles**.  
 
-Image preprocessing and recognition pipeline for plate detection.
+---
 
-Database integration for real-time vehicle validation.
+## 🧠 Next Steps  
 
-Twilio-powered SMS alerts to inform users about registration/document status.
+- 🔬 Enhance ANPR accuracy using **deep learning (YOLO, CRNN)**.  
+- 🌐 Deploy as a **cloud-based API** for smart city applications.  
+- 📊 Build a **dashboard for authorities** to view compliance reports in real time.  
+- 🚦 Expand to **traffic violation detection** (overspeeding, red-light jumping, etc.).  
 
-Web-based front-end for user interaction and monitoring.
-
-Deployment: Runs locally with MySQL backend. Accessible at http://localhost:3000/admin.
+---
