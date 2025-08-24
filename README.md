@@ -6,6 +6,14 @@ Maintained by **Somil Singh** — *Software Engineer & AI Enthusiast*
 
 ---
 
+## 📖 Repository Description
+
+The Indian-ANPR (Automatic Number Plate Recognition) system is a research-driven project that combines Computer Vision, Database Systems, and Real-Time Notifications to automate vehicle compliance verification in the Indian context. Using  OCR (Optical Character Recognition) - pytesseract for license plate detection and recognition, the system extracts vehicle numbers from images and validates them against a MySQL registration database.
+
+To enhance usability, the project integrates with Twilio, allowing authorities to track which users are registered and which are not through automated SMS notifications. This work demonstrates a practical application of AI and software engineering by bridging image processing, backend database design, and cloud-based communication APIs.
+
+The project not only strengthened my expertise in AI frameworks and Python development, but also highlighted the role of integrated intelligent systems in real-world societal applications such as traffic enforcement and smart city solutions.
+
 ## 📂 Project Overview  
 
 - 🚘 Developed a **vehicle details verification system** powered by **Computer Vision + Database Integration**.  
