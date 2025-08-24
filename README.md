@@ -4,6 +4,8 @@
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)](https://www.python.org/) [![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv)](https://opencv.org/) [![MySQL](https://img.shields.io/badge/Database-MySQL-orange?logo=mysql)](https://www.mysql.com/) [![Twilio](https://img.shields.io/badge/Notifications-Twilio-red?logo=twilio)](https://www.twilio.com/) [![AI](https://img.shields.io/badge/AI-Computer%20Vision-purple?logo=ai)]() [![Research](https://img.shields.io/badge/Focus-Research--Driven-yellow)]()  
 
+<img src="assets/anpr-demo.png" width="650" alt="ANPR System Demo"/>
+
 ---
 
 ## 📖 Repository Description
